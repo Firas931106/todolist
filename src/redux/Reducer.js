@@ -14,7 +14,7 @@ export const taskReducer = (state = initialState, action) => {
         case DELETE:
             return {
                 ...state,
-                tasks: state.tasks.filter((task) => task.id === action.playload)
+                tasks: state.tasks.filter((task) => task.id !== action.playload)
             }
         case TOGGLETASK:
             return {
